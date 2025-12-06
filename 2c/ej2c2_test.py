@@ -13,3 +13,7 @@ def test_get_element_from_list():
         == "The specified index is out of the items_list's range"
     ), "get_element_from_list does not return the correct value for input ([], 0). It should be 'The specified index is out of the items_list's range'"
     assert get_element_from_list(5, 0).__contains__("An unexpected error has occurred:"), "get_element_from_list does not return the correct value for input (5, 0). It should contain 'An unexpected error has occurred:'"
+
+
+test_get_element_from_list()
+

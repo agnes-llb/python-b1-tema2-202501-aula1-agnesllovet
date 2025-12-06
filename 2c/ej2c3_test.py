@@ -14,3 +14,5 @@ def test_factorial():
         factorial(-1)
     assert calculate_factorial(8) == 40320, "calculate_factorial does not return the correct value for input 8. It should be 40320"
     assert calculate_factorial(-10).__contains__("An unexpected error has occurred:"), "calculate_factorial does not return the correct value for input -10. It should contain 'An unexpected error has occurred:'"
+
+test_factorial()
