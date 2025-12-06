@@ -15,3 +15,7 @@ def test_sum_even_numbers_list():
     assert sum_even_numbers_in_list_do_while([-2, 0, 2]) == 0, "sum_even_numbers_in_list_do_while does not return the correct value for input [-2, 0, 2]. It should be 0"
     assert sum_even_numbers_in_list_do_while([2.0, 0, -2]) == 0, "sum_even_numbers_in_list_do_while does not return the correct value for input [2.0, 0, -2]. It should be 0"
     assert sum_even_numbers_in_list_do_while([1, 0, 8, 3, 10]) == 18, "sum_even_numbers_in_list_do_while does not return the correct value for input [1, 0, 8, 3, 10]. It should be 18"
+
+
+#test_sum_even_numbers_list()
+#print ("Final")
