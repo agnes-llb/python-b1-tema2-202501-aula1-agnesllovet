@@ -18,3 +18,9 @@ def test_pep8_conformity():
     style_guide = flake8.get_style_guide()
     report = style_guide.check_files([exercise])
     assert report.get_statistics("E") == [], "Your code does not comply with PEP8. Please review your code"
+
+
+
+test_suma()
+test_pep8_conformity()
+    

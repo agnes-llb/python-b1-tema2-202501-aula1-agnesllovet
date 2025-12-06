@@ -47,9 +47,23 @@ Exemple:
 """
 
 
-def triangle_area_calculate(
-    base, height):
-    # Write here your code
+def triangle_area_calculate(base, height):
+    """
+    Aquesta funcio calcula l'area del triangle.
+    Algoritme  area = base * altura / 2
+    Retorna l'area
+    :param base: valor de la base del triangle / Ha de ser un valor enter
+    :param height: valor de l'alçada del triangle / Ha de ser un valor enter
+    """
+    # Verifiquem que els parametres d'entrada son correctes
+    if (isinstance(base, str) is True):
+        raise TypeError("Verifica parametres entrada")
+    # Els valors negatius i el zalor zero no son acceptables
+    if (base <= 0) or (height <= 0):
+        raise ValueError("Els parametres no pot ser zero"
+                         " i han de ser valors positius")
+    return (base * height / 2)
+
     pass
 
 
@@ -60,3 +74,4 @@ def triangle_area_calculate(
 # l'scrip
 
 # print(triangle_area_calculate(33, 45))
+# print(triangle_area_calculate(0, -45))

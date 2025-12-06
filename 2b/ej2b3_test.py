@@ -29,3 +29,8 @@ def test_pep8_conformity():
     report = style_guide.check_files([exercise])
     print(report)
     assert report.total_errors == 0, "Your code does not comply with PEP8. Please review your code"
+
+
+#test_triangle_area_calculate_invalid_numbers()
+#test_triangle_area_calculate()
+test_pep8_conformity()

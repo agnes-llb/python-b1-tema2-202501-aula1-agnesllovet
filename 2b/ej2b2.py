@@ -60,9 +60,16 @@ L'any a comprovar serà '2000', de manera que:
 """
 
 
-def check_leap_year(
-    year):
+def check_leap_year(year):
     # Write here your code
+    # Si compleix aquesta condicio es un any de traspas
+    if (year % 4 == 0) and (year % 100 != 0):
+        return True
+    # Si compleix aquesta condicio es un any de traspas
+    if (year % 4 == 0) and (year % 100 == 0) and (year % 400 == 0):
+        return True
+    # En cas que no compleixi cap de les dues anteriors no es any de traspas
+    return False
     pass
 
 
