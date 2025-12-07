@@ -68,12 +68,33 @@ Exemple:
 
 def calculate_max_and_min(list_numbers):
     # Write here your code
+    # Mirem que la llista no estigui buida
+    if not list_numbers:
+        raise ValueError("La llista introduida está buida")
+    # mirem que el component de la llista es un numero
+    for i_pos in range(0, len(list_numbers),2):
+        if isinstance(list_numbers[i_pos], str) is True:    
+            raise TypeError("la llista conté strings ")
+    # Inicialitzem les variables max/min amb el primer valor i començarem a comparar 
+    max_value=list_numbers[0]
+    min_value=list_numbers[0]
+    for i_pos in range(1, len(list_numbers)):
+        if list_numbers[i_pos] > max_value:  
+            max_value=list_numbers[i_pos]
+        if list_numbers[i_pos] <= min_value:
+            min_value=list_numbers[i_pos]
+        print (f"Iteracio: {i_pos}. Max Valor: {max_value} Min Value: {min_value}")   
+#    return { 'Lesser :': min_value,
+#             'Greater :': max_value}
+    return (min_value,max_value)
     pass
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
 
-# print(
-#     "\nResult: ", calculate_max_and_min([10, 5.1, 0, -2, 31, 55, 70, -10, 200, -55.55])
-# )
+print(
+    "\nResult: ", calculate_max_and_min([10, 5.1, 0, -2, 31, 55, 70, -10, 200, -55.55])
+)
+# print( calculate_max_and_min([]))
+# print( calculate_max_and_min(["hola",8,-35]))

@@ -53,10 +53,14 @@ Exemples:
 
 def division_list(list_numbers: List, number: int) -> List[float]:
     result = []
+    if not isinstance(number, int) and not isinstance(number, float):
+        raise TypeError(f"Value {number} is not numeric.")    
     for number_in_list in list_numbers:
-        if not isinstance(number_in_list, str):
-            raise IndexError(f"Value {number_in_list} is not numeric.")
-        result.append(number_in_list)
+        if not isinstance(number_in_list, int) and not isinstance(number_in_list, float):
+            raise TypeError(f"Value {number_in_list} is not numeric.")
+#       if not isinstance(number_in_list, str):
+#           raise IndexError(f"Value {number_in_list} is not numeric.")
+        result.append(number_in_list/number)
     return result
 
 

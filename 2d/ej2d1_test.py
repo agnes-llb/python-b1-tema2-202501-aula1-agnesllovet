@@ -10,3 +10,7 @@ def test_kg_to_lb():
 
     with pytest.raises(TypeError):
         kg_to_lb("abc"), "kg_to_lb does not raise an exception for input 'abc'. It should raise a TypeError"
+
+
+test_kg_to_lb()
+        

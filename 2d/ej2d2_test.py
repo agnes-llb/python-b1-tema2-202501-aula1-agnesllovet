@@ -9,3 +9,6 @@ def test_calculate_max_and_min(capfd):
     salida_stdout, salida_stderr = capfd.readouterr()
     assert salida_stdout.strip() != "", "calculate_max_and_min does not print anything"
     assert salida_stderr.strip() == "", "calculate_max_and_min prints an error message"
+
+
+test_calculate_max_and_min()
